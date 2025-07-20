@@ -1,0 +1,101 @@
+/* إعدادات أساسية للصفحة */
+body {
+    font-family: 'Cairo', sans-serif; /* يفضل استخدام خط عربي مثل Cairo */
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* الحاوية الرئيسية للتطبيق */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+}
+
+/* منطقة إدخال المهمة الجديدة */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: #3f51b5;
+}
+
+/* قائمة المهام */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* شكل المهمة عند إنجازها */
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+    background-color: #e8e8e8;
+}
+
+.delete-btn {
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    visibility: hidden; /* إخفاء الزر بشكل افتراضي */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#task-list li:hover .delete-btn {
+    visibility: visible; /* إظهار الزر عند مرور الماوس فوق المهمة */
+    opacity: 1;
+}
